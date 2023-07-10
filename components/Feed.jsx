@@ -15,7 +15,7 @@ const IdeaCardList = ({ data, handleTagClick }) => {
 const Feed = () => {
   const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
-  const handleSearchTextChange = (e) => {};
+  //const handleSearchTextChange = (e) => {};
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -30,13 +30,14 @@ const Feed = () => {
     <section className="feed">
       <form className="relative w-full flex-center">
         <input
-          value={searchText}
+          // value={searchText}
           placeholder="Search for a tag or an username"
-          onChange={handleSearchTextChange}
+          // onChange={handleSearchTextChange}
           type="text"
           required
           className="search_input peer"
         />
+       
       </form>
       <IdeaCardList data={posts} handleTagClick={() => {}} />
     </section>
